@@ -1,0 +1,45 @@
+<!-- to use ejs-mate remove all part expect body tags because we want to use body tag in boilerplate.ejs file -->
+
+<% layout("/layouts/boilerplate") %> <!-- to use ejs-mate -->
+
+    <body>
+        <h3>All Listings</h3>
+
+        <!-- <form method="get" action="/listings/new">
+        <button>Create new</button>
+    </form> -->
+
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for (listing of allListings){ %>
+                <a href="/listings/<%= listing._id %>" class="listing-show">
+                    <div class="card col">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img"
+                            style="height: 20rem;">
+                            <div class="card-img-overlay"><i class="fa-regular fa-heart"></i></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b> <br>
+                                <!-- &#8377; <%= //listing.price.toLocaleString("en-IN") %> / night  -->
+                               &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> / night
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+
+        <!-- <ul>
+                    <% for (listing of allListings){ %>
+
+                        <li>
+                            <a href="/listings/<%= listing._id %>">
+                                <%= listing.title %>
+                            </a>
+                        </li>
+
+                        <% } %>
+                </ul> -->
+    </body>

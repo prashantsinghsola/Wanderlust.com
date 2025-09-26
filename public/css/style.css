@@ -1,0 +1,110 @@
+/* if wew want to use this css on all page then we have to link our css file in boilerplate.ejs */
+
+body{
+
+  /* <weight>: Use a value from 200 to 800 */
+
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+}
+.container{
+     flex:1; /*take remaning space */
+}
+
+.navbar{
+    height: 4rem;
+    background-color: wheat;
+}
+
+.fa-compass{
+    color: firebrick;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;  /* use to over power to bootstrap css */
+}
+
+/* footer */
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+
+}
+
+.f-info-links a:hover{
+    text-decoration:underline;
+
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 6rem;
+    background-color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Card */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.listing-show{
+    text-decoration: none !important;
+}
+
+/* card-effect */
+.card-img-overlay {
+    opacity: 0;
+}
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* show-page */
+
+.show-img{
+    height: 70vh;
+}
+.btns{
+    display: flex;
+
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
